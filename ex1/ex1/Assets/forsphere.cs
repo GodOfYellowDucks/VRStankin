@@ -18,8 +18,8 @@ public class forsphere : MonoBehaviour
     void FixedUpdate()
     {
         text.text = "Вы нажали " + cntr.ToString() + " раз";
-        if (cntr % 2 == 0) { capsule.gameObject.GetComponent<Renderer>().material.color = new Color32((byte)255, (byte)0, (byte)0, 1); }
-        if(cntr % 2 != 0) { capsule.gameObject.GetComponent<Renderer>().material.color = new Color32((byte)0, (byte)255, (byte)0, 1); }
+        if (cntr % 2 == 0) {capsule.SetActive(false); }
+        if(cntr % 2 != 0) { capsule.gameObject.GetComponent<Renderer>().material.color = new Color32((byte)0, (byte)255, (byte)0, 1); capsule.SetActive(true); }
     }
     public void btnClck()
     {
